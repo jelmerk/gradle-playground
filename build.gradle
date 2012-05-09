@@ -1,0 +1,24 @@
+apply plugin: 'idea'
+
+allprojects {
+
+    defaultTasks 'clean', 'build'
+    
+    group = 'nl.orange11'
+
+    repositories {
+        mavenCentral()
+        mavenLocal()    
+    }
+}
+
+ext {
+    libraries = [
+        httpclient: 'commons-httpclient:commons-httpclient:3.1',
+        junit:      'junit:junit:4.10'
+    ]
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.0-rc-3'
+}

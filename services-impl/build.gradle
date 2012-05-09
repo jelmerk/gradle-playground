@@ -1,0 +1,9 @@
+apply plugin: 'java'
+
+description='The implementation of the services'
+
+dependencies {
+    compile project(':services-api')
+    compile libraries.httpclient
+    testCompile libraries.junit
+}
