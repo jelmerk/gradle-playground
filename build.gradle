@@ -1,15 +1,33 @@
 apply plugin: 'idea'
 
+defaultTasks 'clean', 'build'
+
+idea {
+    project {
+        jdkName = "1.6"
+        ipr {
+            withXml { provider ->
+                provider.node.component.find { it.@name == 'VcsDirectoryMappings' }.mapping.@vcs = 'Git'
+            }
+            beforeMerged { project ->
+                project.modulePaths.clear()
+            }
+        }
+    }
+    module {
+        name = "gradle-playground"
+    }
+}
+
 allprojects {
-
-    defaultTasks 'clean', 'build'
-    
-    group = 'nl.orange11'
-
     repositories {
         mavenCentral()
         mavenLocal()    
     }
+}
+
+subprojects {
+    apply plugin: 'idea'
 }
 
 ext {
