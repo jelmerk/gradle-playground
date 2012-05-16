@@ -1,5 +1,7 @@
 apply plugin: 'java'
+apply plugin: 'maven'
 
+archivesBaseName = 'playground-services-impl'
 description='The implementation of the services'
 
 dependencies {

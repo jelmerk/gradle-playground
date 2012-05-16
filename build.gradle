@@ -1,6 +1,8 @@
 apply plugin: 'idea'
 apply plugin: 'sonar'
 
+description = 'Project for playing around with Gradle, Sonar and Jenkins'
+
 defaultTasks 'clean', 'build'
 
 idea {
@@ -33,20 +35,21 @@ sonar {
 }
 
 allprojects {
+	group = 'nl.orange11'
+	version = '0.0.1-SNAPSHOT'
+	
+	apply plugin: 'idea'
+	
     repositories {
         mavenCentral()
         mavenLocal()    
     }
-}
-
-subprojects { subProject ->
-    apply plugin: 'idea'
-
+    
     sonar {
         project {
             sourceEncoding = "UTF-8"
         }
-    }
+    }    
 }
 
 ext {
