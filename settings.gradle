@@ -1,1 +1,7 @@
 include 'services-api', 'services-impl', 'web'
+
+rootProject.children.each {project ->
+    project.buildFileName = "${project.name}.gradle"
+    assert project.projectDir.isDirectory()
+    assert project.buildFile.isFile()
+}
