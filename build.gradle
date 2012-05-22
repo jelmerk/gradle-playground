@@ -1,5 +1,7 @@
+apply plugin: 'base'
 apply plugin: 'idea'
 apply plugin: 'sonar'
+apply plugin: 'maven'
 
 description = 'Project for playing around with Gradle, Sonar and Jenkins'
 
@@ -49,8 +51,18 @@ allprojects {
         project {
             sourceEncoding = "UTF-8"
         }
-    }    
+    }
 }
+
+
+uploadArchives {
+	repositories {
+		mavenDeployer {
+			repository(url: "http://localhost:8080") 
+		}
+	}
+}
+
 
 ext {
     libraries = [
