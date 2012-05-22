@@ -5,6 +5,6 @@ package nl.orange11.service;
  */
 public interface HelloService {
 
-    String sayHi(String name);
+    String sayBoo(String name);
 
 }
