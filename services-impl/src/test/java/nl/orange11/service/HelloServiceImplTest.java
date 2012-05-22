@@ -19,7 +19,7 @@ public class HelloServiceImplTest extends TestCase {
 
     @Test
     public void testSayHello() throws Exception {
-        assertEquals("hello jelmer", service.sayHello("jelmer"));
+        assertEquals("hello jelmer", service.sayHi("jelmer"));
 
         Thread.sleep(TimeUnit.MINUTES.toMillis(2));
     }

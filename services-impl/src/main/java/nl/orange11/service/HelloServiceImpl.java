@@ -5,7 +5,7 @@ package nl.orange11.service;
  */
 public class HelloServiceImpl implements HelloService {
 
-    public String sayHello(String name) {
+    public String sayHi(String name) {
         return "hello " + name;
     }
 }
