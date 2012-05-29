@@ -20,8 +20,6 @@ public class HelloServiceImplTest extends TestCase {
     @Test
     public void testSayHello() throws Exception {
         assertEquals("hello jelmer", service.sayBoo("jelmer"));
-
-        //Thread.sleep(TimeUnit.MINUTES.toMillis(2));
     }
 
 }
