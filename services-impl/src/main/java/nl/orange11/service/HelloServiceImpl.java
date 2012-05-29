@@ -9,7 +9,8 @@ public class HelloServiceImpl implements HelloService {
 
     public String sayBoo(String name) {
 
-        ResultSet resultSet = null; // just here to see if the sonar architecture rule gets picked up by sonar
+        // just here to see if the sonar architecture rule gets picked up by sonar
+        System.out.println(ResultSet.TYPE_SCROLL_INSENSITIVE);
 
         return "hello " + name;
     }
