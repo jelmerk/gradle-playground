@@ -3,8 +3,6 @@ package nl.orange11.service;
 import junit.framework.TestCase;
 import org.junit.Test;
 
-import java.util.concurrent.TimeUnit;
-
 /**
  * @author Jelmer Kuperus
  */
@@ -19,7 +17,7 @@ public class HelloServiceImplTest extends TestCase {
 
     @Test
     public void testSayHello() throws Exception {
-        assertEquals("hello jelmer", service.sayBoo("jelmer"));
+        assertEquals("hello jelmer", service.sayHello("jelmer1004"));
     }
 
 }
